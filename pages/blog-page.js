@@ -2,7 +2,7 @@ import Layout from "../components/Layout"
 import Post from "../components/post"
 import { getAllPostData } from "../lib/posts"
 
-const Blog = ({posts}) => {
+export default function Blog ({posts}) {
     return (
         <Layout title="Blog">
             <ul className="m-10"> 
@@ -12,7 +12,7 @@ const Blog = ({posts}) => {
     )
 }
 
-export default Blog
+
 
 export async function getStaticProps(){
     const posts = await getAllPostData()
